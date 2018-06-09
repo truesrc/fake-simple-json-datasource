@@ -51,9 +51,10 @@ var table =
   };
   
 function setCORSHeaders(res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST");
-  res.setHeader("Access-Control-Allow-Headers", "accept, content-type");  
+//  res.setHeader("Access-Control-Allow-Origin", "*");
+//  res.setHeader("Access-Control-Allow-Methods", "POST");
+//  res.setHeader("Access-Control-Allow-Headers", "accept, content-type");  
+  res.setHeader("Content-Type", "text/plain; version=0.0.4");  
 }
 
 
@@ -68,7 +69,7 @@ for (var i = 0;i < table.values.length; i++) {
 
 app.all('/', function(req, res) {
   setCORSHeaders(res);
-  res.send('I have a quest for you!');
+  res.send(``);
   res.end();
 });
 
